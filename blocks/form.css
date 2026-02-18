@@ -4,18 +4,16 @@
 }
 
 .form__fieldset {
-  display: flex;
-  flex-direction: column;
   border: none;
   margin: 0;
   padding: 0;
+  width: 400px;
 }
 
 .form__input {
   border-radius: 4px;
   display: block;
   width: 100%;
-  border: 1px solid #838383;
   margin: 8px 0 16px;
   box-sizing: border-box;
   padding: 15px 20px;
@@ -28,7 +26,6 @@
   border-radius: 4px;
   display: block;
   width: 100%;
-  border: 1px solid #838383;
   margin: 8px 0 16px;
   box-sizing: border-box;
   padding: 15px 20px;

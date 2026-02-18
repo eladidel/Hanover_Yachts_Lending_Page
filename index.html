@@ -11,15 +11,8 @@
   </head>
   <body>
     <div class="page">
-      <div class="page__content">
-        <header class="header">
-          <img
-            src="./images/hanover-color-horizontal-logo.svg"
-            alt="Hanover Logo"
-            class="header__logo_hanover"
-          />
-        </header>
-        <main class="content">
+      <main class="content">
+        <div>
           <form action="" class="form">
             <fieldset class="form__fieldset">
               <input
@@ -51,6 +44,7 @@
                 placeholder="Model of intres"
                 required
               >
+                <option value=""></option>
                 <option value="Hanover 255">Hanover 255</option>
                 <option value="Hanover 265">Hanover 265</option>
                 <option value="Hanover 305">Hanover 305</option>
@@ -64,16 +58,17 @@
                 <option value="Hanover 447">Hanover 447</option>
               </select>
               <select class="form__select" required>
-                <option value="TBD">To Be Determined</option>
+                <option value=""></option>
+                <option value="TBD">Not Determined Yet</option>
                 <option value="Roni Meirovitz">Roni Meirovitz</option>
                 <option value="Yohanan Castillo">Yohanan Castillo</option>
                 <option value="Naama Issachar">Naama Issachar</option>
               </select>
+              <button type="submit" class="form__button">Send</button>
             </fieldset>
-            <input type="submit" class="form__button" value="Send" />
           </form>
-        </main>
-      </div>
+        </div>
+      </main>
     </div>
   </body>
 </html>
