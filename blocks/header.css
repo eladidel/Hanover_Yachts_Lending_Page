@@ -1,13 +1,32 @@
 .header {
   display: flex;
-  gap: 20px;
-  padding: 20px 20px 0;
+  margin-bottom: 20px;
 }
 
 .header__logo_hanover {
-  width: 200px;
+  width: 220px;
 }
 
 .header__logo_show {
-  width: 200px;
+  width: 280px;
+}
+
+@media screen and (max-width: 1024px) {
+  .header__logo_hanover {
+    width: 120px;
+  }
+
+  .header__logo_show {
+    width: 180px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header__logo_hanover {
+    width: 220px;
+  }
+
+  .header__logo_show {
+    width: 280px;
+  }
 }

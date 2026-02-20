@@ -1,7 +1,12 @@
 .content {
   display: flex;
-  justify-content: flex-end;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 40px;
+  background-color: rgb(236, 236, 231);
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    width: 100%;
+    justify-content: center;
+  }
 }

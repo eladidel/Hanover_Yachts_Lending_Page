@@ -1,4 +1,14 @@
 .page {
   min-height: 100vh;
-  background: left center/cover no-repeat url(../images/Artboard_2.png);
+  display: flex;
+  justify-content: flex-end;
+  background: left center/cover no-repeat url(../images/Artboard_2.svg);
+}
+
+@media screen and (max-width: 768px) {
+  .page {
+    background: center/cover no-repeat url(../images/Artboard_1.svg);
+    padding-top: 400px;
+    justify-content: center;
+  }
 }

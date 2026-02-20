@@ -1,15 +1,11 @@
 .form {
-  margin: 0 auto;
-  max-width: 1440px;
-  background-color: rgb(236, 236, 231);
-  border-radius: 15px;
+  padding: 60px;
 }
 
 .form__fieldset {
   border: none;
   margin: 0;
-  padding: 20px;
-  max-width: 400px;
+  max-width: 800px;
 }
 
 .form__input {
@@ -22,7 +18,7 @@
   font-size: 20px;
   line-height: 30px;
   border: none;
-  border-radius: 25px;
+  border-radius: 8px;
 }
 
 .form__select {
@@ -35,7 +31,7 @@
   font-size: 20px;
   line-height: 30px;
   border: none;
-  border-radius: 25px;
+  border-radius: 8px;
 }
 
 .form__button {
@@ -49,7 +45,7 @@
   font-weight: 500;
   color: #fff;
   transition: background-color 0.3s;
-  border-radius: 25px;
+  border-radius: 8px;
 }
 
 .form__button:hover {
@@ -65,4 +61,10 @@ input::-ms-input-placeholder {
 
 input::placeholder {
   color: #838383;
+}
+
+@media screen and (max-width: 1024px) {
+  .form {
+    padding: 20px;
+  }
 }
