@@ -76,7 +76,7 @@ input::placeholder {
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 517px) {
   .form__fieldset {
     width: 340px;
   }
