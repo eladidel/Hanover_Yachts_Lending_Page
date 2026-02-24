@@ -8,7 +8,10 @@
 @media screen and (max-width: 768px) {
   .page {
     background: center/cover no-repeat url(../images/Artboard_1.svg);
-    padding-top: 400px;
     justify-content: center;
+  }
+  .page__layer {
+    height: 900px;
+    background-color: black;
   }
 }
