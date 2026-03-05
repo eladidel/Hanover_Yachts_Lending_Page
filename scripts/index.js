@@ -1,30 +1,29 @@
 const scriptURL =
-  "https://script.google.com/macros/s/AKfycbw6VBUnuLAX9rwb2AIhe69GtPdU0vYKHXnQBpzuriybGLBDqPQ1BnQmqurgXTLr8JPLiQ/exec"; // <--- Paste your URL here
-const form = document.getElementById("submit-to-google");
-const msg = document.getElementById("msg");
+  "https://script.google.com/macros/s/AKfycbw6VBUnuLAX9rwb2AIhe69GtPdU0vYKHXnQBpzuriybGLBDqPQ1BnQmqurgXTLr8JPLiQ/exec"; // Replace with your actual URL
+const form = document.querySelector(".form");
+const btn = form.querySelector(".form__button");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  // Change button text to show it's working
-  const submitBtn = document.getElementById("submit-btn");
-  submitBtn.disabled = true;
-  submitBtn.innerHTML = "Sending...";
+  // UI Feedback: Disable button and show progress
+  btn.disabled = true;
+  btn.innerHTML = "Sending...";
 
-  fetch(scriptURL, { method: "POST", body: new FormData(form) })
+  fetch(scriptURL, {
+    method: "POST",
+    body: new FormData(form),
+  })
     .then((response) => {
-      msg.innerHTML = "Message sent successfully!";
-      setTimeout(function () {
-        msg.innerHTML = "";
-      }, 5000);
+      alert("Success! Your information has been sent.");
       form.reset();
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = "Send Message";
+      btn.disabled = false;
+      btn.innerHTML = "Send";
     })
     .catch((error) => {
       console.error("Error!", error.message);
-      msg.innerHTML = "Something went wrong. Try again.";
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = "Send Message";
+      alert("There was an error submitting the form. Please try again.");
+      btn.disabled = false;
+      btn.innerHTML = "Send";
     });
 });
