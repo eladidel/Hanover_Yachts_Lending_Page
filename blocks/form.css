@@ -49,6 +49,15 @@
   border-radius: 8px;
 }
 
+.form__success {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  color: #1a4a72;
+}
+
 .form__button:hover {
   background-color: #3f96f3;
 }
@@ -80,13 +89,4 @@ input::placeholder {
   .form__fieldset {
     width: 340px;
   }
-}
-
-.form--success {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-weight: bold;
-  color: #1a4a72; /* A nice nautical navy */
 }

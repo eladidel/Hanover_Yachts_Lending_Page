@@ -1,12 +1,11 @@
 const scriptURL =
-  "https://script.google.com/macros/s/AKfycbw6VBUnuLAX9rwb2AIhe69GtPdU0vYKHXnQBpzuriybGLBDqPQ1BnQmqurgXTLr8JPLiQ/exec"; // Replace with your actual URL
+  "https://script.google.com/macros/s/AKfycbw6VBUnuLAX9rwb2AIhe69GtPdU0vYKHXnQBpzuriybGLBDqPQ1BnQmqurgXTLr8JPLiQ/exec";
 const form = document.querySelector(".form");
 const btn = form.querySelector(".form__button");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  // UI Feedback: Disable button and show progress
   btn.disabled = true;
   btn.innerHTML = "Sending...";
 
@@ -16,8 +15,8 @@ form.addEventListener("submit", (e) => {
   })
     .then((response) => {
       form.innerHTML =
-        "<h3>Thank you!</h3><p>A Hanover specialist will contact you shortly.</p>";
-      form.classList.add("form--success");
+        "<h3>Thank you!</h3><p>An Hanover specialist will contact you shortly.</p>";
+      form.classList.add("form__success");
     })
     .catch((error) => {
       console.error("Error!", error.message);
